@@ -1,0 +1,207 @@
+body {
+  font-family: helvetica;
+  margin: 0;
+  padding: 0;
+  background: #8BB381;
+  padding-top: 235px;
+  padding-bottom: 175px;
+}
+.header {
+  color: #fff;
+  z-index: 800;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.75);
+}
+.header a {
+  color: #fff;
+  text-decoration: none;
+}
+.header h1 {
+  font-size: 100%;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: black 0.2em 0.2em 0.2em;
+  display: inline-block;
+  margin-right: 10px;
+}
+.search {
+  position: fixed;
+  left: 0;
+  top: 37px;
+  height: 200px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-right: 1px solid #333;
+  z-index: 800;
+}
+.searchInner {
+  padding: 5px;
+}
+.search input {
+  background: transparent;
+  border: 0;
+  padding: 5px;
+  margin: 0;
+  font-size: 115%;
+  color: #fff;
+  width: 180px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.recipe {
+  width: 475px;
+  background: #fff;
+  border: 5px solid #fff;
+  border-radius: 5px;
+  margin: 10px;
+}
+.recipe .photo {
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  border-bottom: 4px solid #fff;
+}
+.recipe .photo.blank {
+  height: auto;
+}
+.photo img {
+  margin-top: -220px;
+}
+.recipe ul {
+  padding: 5px;
+}
+.recipe li {
+  margin-bottom: 5px;
+}
+.recipe .instructions {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.recipe h3 {
+  font-weight: bold;
+  font-size: 115%;
+  padding-top: 10px;
+  width: 465px;
+}
+.recipe .photo h3 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 5px;
+  color: #fff;
+  font-size: 150%;
+  text-shadow: black 0.2em 0.2em 0.2em;
+  background: rgba(0, 0, 0, 0.3);
+}
+.recipe .photo.blank h3 {
+  position: relative;
+}
+.recipe .instructions {
+  clear: both;
+  line-height: 1.25em;
+}
+.item {
+  float: left;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  border: 5px solid #ff0033;
+  border-radius: 5px;
+  margin: 5px;
+  position: relative;
+}
+.item.haveItem {
+  border: 5px solid #387C44;
+}
+.clear {
+  clear: both;
+}
+.item h3 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 5px;
+  color: #fff;
+  font-size: 100%;
+  font-weight: normal;
+  text-shadow: black 0.2em 0.2em 0.2em;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+.inventory {
+  z-index: 800;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  overflow: auto;
+}
+.inventory ul {
+  width: 100%;
+  height: 95px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-top: 1px solid #333;
+}
+.inventory li {
+  float: left;
+}
+.inventory .item {
+  border: 5px solid #387c44;
+}
+.health {
+  width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.stamina {
+  float: left;
+}
+.stamina .heart {
+  float: left;
+  margin-right: 2px;
+}
+.hunger {
+  float: right;
+}
+.hunger .bone {
+  float: left;
+  margin-right: 2px;
+}
+.expwrap {
+  margin-bottom: 5px;
+}
+.experience {
+  padding-left: 5px;
+  width: 456px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.experience .piece {
+  float: left;
+  width: 24px;
+  height: 5px;
+  border: 1px solid #333;
+  background: lime;
+  border-right: 0;
+}
+.experience .piece:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.experience .piece:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-right: 1px solid #333;
+}
+.userDetails > .ui-dialog-titlebar {
+  display: none;
+}
