@@ -8,19 +8,25 @@ port = require("optimist")
 	
 app = express.createServer()
 
+RAF = require "./src/raf/api"
+
 app.configure ->
 	app.use express.static(__dirname + './public/images')
 	app.use express.static(__dirname + './public/js')
 	app.use express.static(__dirname + './public/css')
 
-	#ghetto mod rewrite..
-	app.use (req, res, next) ->
-		#if it has a dot in it we assume its a file
-		if req.url.split('.').length is 1
-			req.url = ''
-		next()
+	app.use express.bodyParser()
+
+	app.get "/ingredients", (req, res) ->
+		res.send RAF.Ingredient.getAll()
+
+	app.post "/ingredients", (req, res) ->
+		RAF.Ingredient.save req.body
+		res.send true
 	
 	app.use express.static(__dirname + '/public')
+
+
 	
 app.listen port
 
